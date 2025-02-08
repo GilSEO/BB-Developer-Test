@@ -33,6 +33,23 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        $user = Auth::user();
+
+        if ($request->wantsJson()) {
+            $currentToken = $user->tokens()->first();
+
+            if (!$currentToken) {
+                $token = $user->createToken('API Token')->plainTextToken;
+            }
+
+            return response()->json([
+                'response' => 'Login Succesful',
+                'token' => $token,
+                'user' => $user,
+            ]);
+
+        }
+
         return redirect()->intended(route('dashboard', absolute: false));
     }
 

@@ -16,6 +16,12 @@ class CheckCapsuleAccess
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (!$request->route('capsule')) {
+            return $next($request);
+        }
+        if ($request->is('api/login')) {
+            return $next($request);
+        }
         $capsule = $request->route('capsule');
 
         if (!$capsule) {

@@ -12,8 +12,8 @@ This repository contains the backend for the Developer Test project. It is built
 
 1. **Clone the Repository:**
    ```bash
-   git clone <backend-repo-url>
-   cd <repository-directory>
+   git clone <https://github.com/GilSEO/BB-Developer-Test/>
+   cd <developer-test>
 2. Install Composer Dependencies:
    ```bash
    composer install

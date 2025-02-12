@@ -6,7 +6,7 @@
 - **PHP:** 8.1 or higher  
 - **Composer**  
 - **Database:** MySQL (or another supported database)  
-- **Node.js:** Required if asset building is necessary
+- **Node.js:**
 
 ## Installation and Setup
 

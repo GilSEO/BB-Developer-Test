@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageCapsuleController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 Route::get('/user', function () {
     return response()->json(auth()->user());
@@ -12,6 +13,8 @@ Route::get('/user', function () {
 Route::post('/login', [AuthenticatedSessionController::class, 'apiLogin']);
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'apiLogout'])->middleware('auth:sanctum');
+
+Route::post('/register', [RegisteredUserController::class, 'apiRegister']);
 
 
 Route::middleware('auth:sanctum')->group(function () {

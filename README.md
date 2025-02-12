@@ -1,15 +1,5 @@
 This repository contains the backend for the Developer Test project. It is built using Laravel 11 and provides an API for managing message capsules and user authentication.
 
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Installation and Setup](#installation-and-setup)
-- [Environment Configuration](#environment-configuration)
-- [Running the Application](#running-the-application)
-- [Running Tests](#running-tests)
-- [API Endpoints](#api-endpoints)
-- [Additional Information](#additional-information)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Prerequisites
 
